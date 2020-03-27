@@ -1,0 +1,16 @@
+.singleRow {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  font-family: "Oswald", sans-serif;
+  font-style: italic;
+}
+.single {
+  margin-top: 20px;
+}
+.socialMedia {
+  margin-top: 20px;
+  display: flex;
+  flex-flow: column;
+}

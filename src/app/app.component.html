@@ -1,0 +1,51 @@
+<div (window:resize)="onResize($event)">
+  <div *ngIf="!isMobile">
+    <div class="wrapper">
+      <div class="row" style="padding: 0; margin: 0;">
+        <div class="col-10" style="padding: 0; margin: 0;">
+          <app-logo></app-logo>
+          <div *ngIf="!isLoading && (isOnline || allDataAvailable)">
+            <app-header *ngIf="isAuthenticated"></app-header>
+            <router-outlet></router-outlet>
+            <app-footer></app-footer>
+          </div>
+          <div *ngIf="isLoading" class="spinner-style">
+            <app-spinner></app-spinner>
+          </div>
+        </div>
+        <div class="col-2" style="padding: 0; margin: 0;">
+          <app-cart *ngIf="isAuthenticated && !isLoading"></app-cart>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="isMobile">
+    <div>
+      <mat-drawer-container>
+        <mat-drawer #drawer mode="push">
+          <div class="icon-pos">
+            <mat-icon class="icon-display" svgIcon="pizza"></mat-icon>
+          </div>
+          <div class="sidenav-items">
+            <app-header></app-header></div
+        ></mat-drawer>
+        <mat-drawer #cart mode="push" position="end"
+          ><app-cart *ngIf="isAuthenticated && !isLoading"></app-cart
+        ></mat-drawer>
+        <mat-drawer-content>
+          <div *ngIf="!isLoading">
+            <app-logo
+              (toggleBtnClick)="drawer.toggle()"
+              (cartBtnClick)="cart.toggle()"
+            ></app-logo>
+            <router-outlet></router-outlet>
+            <app-footer></app-footer>
+          </div>
+          <div *ngIf="isLoading" class="spinner-style">
+            <app-spinner></app-spinner>
+          </div>
+        </mat-drawer-content>
+      </mat-drawer-container>
+    </div>
+  </div>
+</div>

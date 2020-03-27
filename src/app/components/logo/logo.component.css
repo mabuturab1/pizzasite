@@ -1,0 +1,107 @@
+.logo {
+  display: flex;
+  margin: 15px 0px;
+  padding: 0px 10px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+h1 {
+  font-family: "Bangers", cursive;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.6rem;
+  padding-right: 10px;
+  /* color: #874e3a; */
+  color: #e1132b;
+}
+.name {
+  font-family: "Bangers", cursive;
+  display: flex;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1rem;
+  padding-left: 10px;
+  font-weight: 900;
+  text-align: center;
+  color: #e1132b;
+}
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+.label {
+  display: none;
+}
+.label h5 {
+  font-family: "Bangers", cursive;
+  color: #e1132b;
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 0px 10px;
+  line-height: 24px;
+}
+
+/* .toggleBtn {
+  display: flex;
+  flex-flow: column;
+  margin-left: 20px;
+  background-color: transparent;
+  color: #54799c;
+} */
+.toggleBtn {
+  display: block;
+  cursor: pointer;
+  color: #212529;
+  background-color: transparent;
+  border-style: none;
+}
+.icon-display {
+  transform: scale(2);
+  padding-right: 10px;
+}
+/* .toggleBtn div {
+  background-color: #54799c;
+  width: 20px;
+  height: 3px;
+  border: 1px solid #54799c;
+  border-radius: 8px;
+  margin: 2px;
+} */
+.name {
+  text-align: center;
+}
+.logo h1 {
+  align-self: center;
+}
+.shoppingBtn {
+  cursor: pointer;
+  display: block;
+  color: #212529;
+  background-color: transparent;
+  border-style: none;
+}
+
+@media screen and (min-width: 580px) {
+  .headers {
+    display: none;
+    flex-flow: column;
+    justify-content: start;
+  }
+  .shoppingBtn {
+    display: none;
+  }
+  .toggleBtn {
+    display: none;
+    padding: 0;
+    margin: 0;
+  }
+  .label {
+    display: flex;
+  }
+  .logo {
+    align-items: flex-end;
+  }
+}

@@ -1,0 +1,50 @@
+<div class="header">
+  <form #form="ngForm">
+    <h1 mat-dialog-title>Enter Page Details</h1>
+    <div class="dialogBody">
+      <mat-error *ngIf="showError">Re-check form details</mat-error>
+      <mat-form-field>
+        <input
+          matInput
+          required
+          appForbiddenValues="allLabels"
+          [(ngModel)]="data.urlLabel"
+          name="urlLabel"
+          #name="ngModel"
+          placeholder="Enter title text"
+        />
+      </mat-form-field>
+      <!-- <div *ngIf={{name.errors?name.error.forbiddenName!=null:false}}>
+        <p>Name not allowed</p>
+      </div> -->
+      <mat-form-field>
+        <input
+          matInput
+          required
+          appForbiddenValues="allUrls"
+          [(ngModel)]="data.urlName"
+          name="urlName"
+          #urlNname="ngModel"
+          placeholder="Enter url here eg. 'pizza'"
+        />
+      </mat-form-field>
+      <!-- <div *ngIf="{{urlNname.errors?urlNname.error.forbiddenName:false}}">
+        <p>Name not allowed</p>
+      </div> -->
+      <mat-form-field>
+        <mat-label>Select Position Number of Menu Item</mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="urlIndex">
+          <mat-option *ngFor="let item of indexPosition" [value]="item">
+            {{ item }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button (click)="onNoClick()">No Thanks</button>
+      <button mat-button (click)="onYesClicked(form)" cdkFocusInitial>
+        Ok
+      </button>
+    </div>
+  </form>
+</div>

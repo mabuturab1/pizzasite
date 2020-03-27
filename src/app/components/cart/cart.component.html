@@ -1,0 +1,27 @@
+<div class="cart">
+  <h1 *ngIf="!orderSuccess">
+    Your Order
+  </h1>
+  <h1 *ngIf="orderSuccess">
+    Order Successful
+  </h1>
+  <p *ngIf="orderSuccess">
+    Place a new Order
+  </p>
+  <p *ngIf="cartItems.length < 1 && !orderSuccess">
+    Lets add few items
+  </p>
+  <button (click)="orderBtnClicked()" *ngIf="cartItems.length >= 1">
+    Order Now
+  </button>
+  <div class="totalPrice" *ngIf="cartItems.length >= 1">
+    <p>
+      TotalPrice
+    </p>
+    <p>{{ totalPrice }}</p>
+  </div>
+  <app-single-cart
+    *ngFor="let item of cartItems"
+    [cartItem]="item"
+  ></app-single-cart>
+</div>

@@ -1,0 +1,61 @@
+<div class="header">
+  <form (ngSubmit)="onSubmitForm(form)" #form="ngForm">
+    <h1 mat-dialog-title>Enter Product Details</h1>
+    <div class="dialogBody">
+      <mat-error *ngIf="showError">Re-check form details</mat-error>
+      <mat-form-field>
+        <input
+          matInput
+          required
+          [(ngModel)]="data.titleText"
+          name="titleText"
+          placeholder="Enter title text"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          required
+          name="subtitleText"
+          [(ngModel)]="data.subtitleText"
+          placeholder="Enter subtitle text"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          required
+          [(ngModel)]="data.imageSrc"
+          name="imageSrc"
+          #imageSrc="ngModel"
+          placeholder="Enter imageURL"
+          (change)="urlNotValid = false"
+        />
+      </mat-form-field>
+      <p *ngIf="imageSrc.touched && urlNotValid">Kindly enter a valid Url</p>
+      <mat-form-field>
+        <input
+          matInput
+          required
+          [(ngModel)]="data.btnText"
+          name="btnText"
+          placeholder="Enter Price"
+        />
+      </mat-form-field>
+      <img
+        [src]="imageSrc.value"
+        (error)="updateUrl(imageSrc.touched,imageSrc)"
+        class="imageStyling"
+      />
+      <mat-error *ngIf="imageSrc.value === defaultUrl"
+        >Value not valid. Setting to default</mat-error
+      >
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button (click)="onNoClick()">No Thanks</button>
+      <button mat-button (click)="onYesClicked(form)" cdkFocusInitial>
+        Ok
+      </button>
+    </div>
+  </form>
+</div>

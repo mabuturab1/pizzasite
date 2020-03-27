@@ -1,0 +1,38 @@
+button {
+  width: 100%;
+  height: 50px;
+  background-color: #f1c40f;
+  box-shadow: 2px 2px rgba(200, 200, 200, 0.5);
+  border: 1px solid greenyellow;
+  cursor: pointer;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+.expansion {
+  display: block;
+}
+.headWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.subtitle {
+  margin: 10px 0;
+}
+.title {
+  color: #212529;
+  font-family: "United-Sans-Rg-Lt", "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+.price {
+  color: #212529;
+  font-family: "United-Sans-Rg-Lt", "Oswald", sans-serif;
+}

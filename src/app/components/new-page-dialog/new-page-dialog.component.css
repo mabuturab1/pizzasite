@@ -1,0 +1,13 @@
+.error {
+    border: 1px solid red;
+  }
+  .imageStyling {
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+  }
+  .dialogBody {
+    display: flex;
+    flex-flow: column;
+  }
+  

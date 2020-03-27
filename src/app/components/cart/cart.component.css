@@ -1,0 +1,31 @@
+.cart {
+  margin-top: 10px;
+}
+h1 {
+  text-align: center;
+  color: #212529;
+  font-family: "United-Sans-Rg-Lt", "Oswald", sans-serif;
+  font-size: 17px;
+}
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+p {
+  color: #212529;
+  font-family: "United-Sans-Rg-Lt", "Oswald", sans-serif;
+  text-align: center;
+}
+button {
+  margin: 0 20%;
+  width: 60%;
+  height: 40px;
+  background-color: #f1c40f;
+  box-shadow: 2px 2px rgba(200, 200, 200, 0.5);
+  border: 1px solid greenyellow;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #ff9102;
+}

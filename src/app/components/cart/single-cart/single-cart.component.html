@@ -1,0 +1,32 @@
+<mat-card>
+  <div class="item">
+    <div class="firstLine">
+      <div class="name">
+        <p>{{ cartItem.name }}</p>
+      </div>
+      <div class="priceWrapper">
+        <p class="price">{{ cartItem.price * cartItem.quantity }}</p>
+        <button (click)="delItem(cartItem)">
+          <i class="fas fa-times fa-xs"></i>
+        </button>
+      </div>
+    </div>
+    <div class="secondLine">
+      <div class="small-detail">
+        <p>{{ cartItem.quantity + " x" + "USD " + cartItem.price }}</p>
+        <div class="size">
+          <p style="font-weight: bold;">Size:</p>
+          <p>{{ getPizzaSize() }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="btns">
+      <button (click)="incQuantity(cartItem)">
+        <i class="fas fa-plus"></i>
+      </button>
+      <button (click)="decQuantity(cartItem)">
+        <i class="fas fa-minus"></i>
+      </button>
+    </div>
+  </div>
+</mat-card>

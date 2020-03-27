@@ -1,0 +1,18 @@
+<div class="transform">
+  <mat-card>
+    <div class="singlePizza">
+      <img
+        [src]="item.imageSrc"
+        alt="A Delicious Food Item"
+        style="border: none; width: 100%; object-fit: cover;"
+      />
+      <div class="content">
+        <h4>{{ item.titleText }}</h4>
+        <p>{{ item.subtitleText }}</p>
+        <button (click)="orderBtnClicked()">
+          {{ "From USD " + item.btnText }}
+        </button>
+      </div>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,37 @@
+<div class="footer">
+  <div class="social">
+    <button>
+      <a target="_blank" [href]="socialMedia.facebook"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+    </button>
+    <button>
+      <a target="_blank" [href]="socialMedia.twitter">
+        <i class="fab fa-twitter"></i
+      ></a>
+    </button>
+    <button>
+      <a target="_blank" [href]="socialMedia.instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </button>
+    <button>
+      <a target="_blank" [href]="socialMedia.youtube">
+        <i class="fab fa-youtube"></i
+      ></a>
+    </button>
+  </div>
+  <div class="wrapper">
+    <div *ngFor="let recipient of footerItems | keyvalue" class="listItems">
+      <div *ngFor="let item of recipient.value" class="footerItem">
+        <h4>
+          {{ item }}
+        </h4>
+      </div>
+    </div>
+  </div>
+  <div class="bottomLine">
+    <h4>Developed By: Muhammad Abu Turab</h4>
+    <h4>m.abuturab1@gmail.com</h4>
+  </div>
+</div>

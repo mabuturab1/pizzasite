@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "United-Sans-Rg-Lt";
+  src: url("/src/assets/fonts/Light/UnitedSansReg-Light.woff2") format("woff2"),
+    url("/src/assets/fonts/Light/UnitedSansReg-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "United-Sans-Rg-Md";
+  src: url("/src/assets/fonts/Medium/UnitedSansReg-Medium.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/Medium/UnitedSansReg-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "United-Sans-Rg-Bk";
+  src: url("/src/assets/fonts/Black/UnitedSansReg-Black.woff2") format("woff2"),
+    url("/src/assets/fonts/Black/UnitedSansReg-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "United-Sans-Rg-Hv";
+  src: url("/src/assets/fonts/Heavy/UnitedSansReg-Heavy.woff2") format("woff2"),
+    url("/src/assets/fonts/Heavy/UnitedSansReg-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "United-Sans-Rg-Bd";
+  src: url("/src/assets/fonts/Bold/UnitedSansReg-Bold.woff2") format("woff2"),
+    url("/src/assets/fonts/Bold/UnitedSansReg-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}

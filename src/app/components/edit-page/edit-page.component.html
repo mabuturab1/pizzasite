@@ -1,0 +1,101 @@
+<div class="wrapper">
+  <div class="single">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <div class="title">
+              <h5>{{ itemName }}</h5>
+            </div>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{ itemDescription }}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div class="input">
+          <div class="singleRow">
+            <p style="font-weight: bold;">
+              Add An Item
+            </p>
+            <button mat-icon-button (click)="itemClicked('add')">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+          <div
+            *ngFor="let item of headerItems; let i = index"
+            class="singleRow"
+          >
+            <p>{{ item.urlLabel }}</p>
+            <div>
+              <button mat-icon-button (click)="itemClicked(item)">
+                <i class="far fa-edit"></i>
+              </button>
+              <button mat-icon-button (click)="itemDelete(item, i)">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <div class="wrapper">
+    <mat-accordion>
+      <mat-expansion-panel #expansion>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <div class="title">
+              <h5>Social Media</h5>
+            </div>
+          </mat-panel-title>
+          <mat-panel-description>
+            Edit your social media links
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="socialMedia">
+          <mat-form-field>
+            <input
+              matInput
+              required
+              [(ngModel)]="socialMedia.facebook"
+              name="titleText"
+              placeholder="Enter facebook link"
+            />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input
+              matInput
+              required
+              [(ngModel)]="socialMedia.twitter"
+              name="titleText"
+              placeholder="Enter twitter link"
+            />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input
+              matInput
+              required
+              [(ngModel)]="socialMedia.instagram"
+              name="titleText"
+              placeholder="Enter instagram link"
+            />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input
+              matInput
+              required
+              [(ngModel)]="socialMedia.youtube"
+              name="titleText"
+              placeholder="Enter youtube link"
+            />
+          </mat-form-field>
+          <button (click)="saveSocialMedia(expansion)" mat-button>Save</button>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

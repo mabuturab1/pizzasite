@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <img
+        style="border: none; width: 100%; object-fit: cover;"
+        [src]="singleItem.imageSrc"
+        alt=""
+      />
+    </div>
+    <div class="col-md-6">
+      <div class="headWrapper">
+        <div class="title">
+          {{ singleItem.titleText }}
+        </div>
+        <div class="price">
+          {{
+            "USD " +
+              this.singleItem.btnText *
+                this.getMultiplyingFactor(
+                  this.getPizzaVal(this.selectedPizzaSize)
+                )
+          }}
+        </div>
+      </div>
+      <div class="subtitle">
+        {{ singleItem.subtitleText }}
+      </div>
+      <div class="expansion">
+        <mat-accordion>
+          <mat-expansion-panel [expanded]="true">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <div class="title">
+                  SIZE
+                </div>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <label id="example-radio-group-label">Pick your pizza size</label>
+            <mat-radio-group
+              aria-labelledby="example-radio-group-label"
+              class="example-radio-group"
+              [(ngModel)]="selectedPizzaSize"
+            >
+              <mat-radio-button
+                class="example-radio-button"
+                *ngFor="let item of pizzaSizeItems"
+                [value]="item"
+              >
+                {{ item }}
+              </mat-radio-button>
+            </mat-radio-group>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+      <button (click)="orderBtnClicked()">Add to Cart</button>
+    </div>
+  </div>
+</div>

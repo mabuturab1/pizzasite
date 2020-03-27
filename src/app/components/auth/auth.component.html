@@ -1,0 +1,8 @@
+<div class="head">
+  <ngx-auth-firebaseui
+    [providers]="[providers.Google, providers.Facebook]"
+    (onSuccess)="printUser($event)"
+    (onError)="printError()"
+  >
+  </ngx-auth-firebaseui>
+</div>

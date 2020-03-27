@@ -1,0 +1,14 @@
+<div class="background">
+  <div *ngIf="isLoading" class="spinner-style">
+    <app-spinner></app-spinner>
+  </div>
+  <div class="row" *ngIf="!isLoading">
+    <div
+      *ngFor="let item of items"
+      class="col-sm-12 col-md-6 col-lg-4 "
+      style="margin: 20px 0; padding: 0;"
+    >
+      <app-single-pizza [item]="item"></app-single-pizza>
+    </div>
+  </div>
+</div>

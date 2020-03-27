@@ -1,0 +1,55 @@
+<div class="headers">
+  <div class="mainHead">
+    <app-header-block
+      *ngFor="let block of headerData; let i = index"
+      [itemName]="block"
+      [itemPopupList]="block.urlPopUp"
+      [id]="block.urlLabel"
+      (clickListen)="headerClicked($event)"
+    ></app-header-block>
+  </div>
+
+  <div class="editHead">
+    <div class="desktopVersion">
+      <app-header-block
+        [itemName]="edit"
+        [itemPopupList]="edit.urlPopUp"
+        (clickListen)="headerClicked($event)"
+      ></app-header-block>
+    </div>
+    <div class="mobileVersion">
+      <mat-accordion>
+        <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <div>
+                <app-header-block
+                  [itemName]="edit"
+                  (clickListen)="headerClicked($event)"
+                ></app-header-block>
+              </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div *ngFor="let item of edit.urlPopUp">
+            <div>
+              <app-header-block
+                [itemName]="item"
+                (clickListen)="headerClicked($event)"
+              ></app-header-block>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+    <app-header-block
+      *ngIf="isAuthenticated"
+      [itemName]="logOut"
+      (clickListen)="headerClicked($event)"
+    ></app-header-block>
+    <app-header-block
+      *ngIf="!isAuthenticated"
+      [itemName]="logIn"
+      (clickListen)="headerClicked($event)"
+    ></app-header-block>
+  </div>
+</div>

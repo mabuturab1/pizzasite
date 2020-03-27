@@ -1,0 +1,14 @@
+<div class="dialog">
+  <h1 mat-dialog-title>{{ data == null ? "Delete Item" : data.header }}</h1>
+  <p>
+    {{
+      data == null ? "Are you sure you want to delete this?" : data.description
+    }}
+  </p>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClicked()">No Thanks</button>
+    <button mat-button (click)="onYesClicked()" cdkFocusInitial>
+      Ok
+    </button>
+  </div>
+</div>

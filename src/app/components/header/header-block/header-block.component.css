@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+h5,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+}
+.label {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+/* .label h5 {
+  color: #874e3a; 
+   color: #515457;
+ 
+} */
+
+.label .head {
+  padding: 15px 0px;
+  margin: 0px;
+  color: #212529;
+  font-family: "United-Sans-Rg-Lt", "Oswald", sans-serif;
+  width: 100%;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+}
+.head h5 {
+  font-size: 15px;
+}
+.label .popup {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 35px;
+  right: auto;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  z-index: 1000;
+  min-width: 100px;
+  background-color: black;
+  color: white;
+  list-style: none;
+}
+
+.label .popup li:hover {
+  background-color: gray;
+}
+.label .popup li {
+  padding-left: 10px;
+  text-align: left;
+}
+.label:hover > .popup {
+  display: block;
+}
+
+hr {
+  padding: 0;
+  margin: 0;
+  border-color: white;
+}
+.header {
+  width: 100%;
+  border: 0;
+  /* border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6; */
+}
+@media screen and (min-width: 580px) {
+  .header {
+    border: 0;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+  }
+  .label .head {
+    padding: 10px 15px;
+  }
+  .label:hover > .head {
+    background-color: rgba(128, 128, 128, 0.3);
+  }
+}

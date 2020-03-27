@@ -1,0 +1,21 @@
+<div class="logo">
+  <button *ngIf="isMobile" class="toggleBtn" (click)="toggleClicked()">
+    <i class="fas fa-bars fa-lg"></i>
+  </button>
+
+  <div class="name" (click)="logoClicked()">
+    <mat-icon class="icon-display" svgIcon="pizza"></mat-icon>
+    <h1>Pizza Shop</h1>
+  </div>
+  <div>
+    <button *ngIf="isMobile" class="shoppingBtn" (click)="cartClicked()">
+      <i class="fas fa-shopping-basket fa-lg"></i>
+    </button>
+  </div>
+  <div class="label">
+    <h5>Welcome</h5>
+    <div *ngIf="currentUser" class="userName">
+      <h5>{{ " " + isAuthenticated ? currentUser.displayName : "Guest" }}</h5>
+    </div>
+  </div>
+</div>

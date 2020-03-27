@@ -1,0 +1,17 @@
+<div class="header">
+  <div class="label">
+    <div class="head" (click)="itemClicked(itemName)">
+      <h5>
+        {{ itemName.urlLabel }}
+      </h5>
+    </div>
+    <ul class="popup">
+      <div *ngFor="let item of itemPopupList">
+        <li (click)="itemClicked(item)">
+          <a>{{ item.urlLabel }}</a>
+        </li>
+        <hr />
+      </div>
+    </ul>
+  </div>
+</div>

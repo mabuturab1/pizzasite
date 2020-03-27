@@ -1,0 +1,57 @@
+.wrapper {
+  overflow: auto;
+  padding-left: 5%;
+  display: flex;
+  justify-content: center;
+}
+.mobile-wrapper {
+  display: block;
+}
+.spinner-style {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom .ui-scrollpanel-wrapper {
+  border-right: 9px solid #f4f4f4;
+}
+
+.custom .ui-scrollpanel-bar {
+  background-color: #1976d2;
+  opacity: 1;
+  transition: background-color 0.3s;
+}
+
+.custom .ui-scrollpanel-bar:hover {
+  background-color: #135ba1;
+}
+mat-drawer {
+  width: 200px;
+  overflow: hidden;
+}
+
+.icon-display {
+  transform: scale(1.6);
+}
+.icon-pos {
+  padding: 0px 80px;
+  margin-top: 30px;
+}
+.sidenav-items {
+  position: absolute;
+}
+.mainContent {
+  width: 1000px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 580px) {
+  .wrapper {
+    display: block;
+  }
+  .mobile-wrapper {
+    display: none;
+  }
+}

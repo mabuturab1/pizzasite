@@ -1,0 +1,12 @@
+<div class="edit">
+  <div class="headers">
+    <div class="head" *ngFor="let item of headerData">
+      <app-single-edit
+        [itemName]="item.urlLabel"
+        [itemList]="getList(item.urlLabel)"
+        (itemListener)="updateItems($event, item.urlLabel)"
+        (deleteListener)="deleteItem($event, item.urlLabel)"
+      ></app-single-edit>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+.footer {
+  background-color: #212529;
+  padding: 20px 0px;
+  margin-top: 20px;
+}
+.social {
+  display: flex;
+  justify-content: center;
+}
+.social button {
+  margin: 10px 5px;
+  background-color: transparent;
+  border: 0;
+}
+.listItems {
+  display: flex;
+  flex-flow: column;
+}
+.footerItem {
+  display: flex;
+  color: white;
+}
+.footerItem h4 {
+  font-size: 14px;
+}
+.wrapper {
+  margin: 30px 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.bottomLine {
+  display: flex;
+  justify-content: center;
+}
+.bottomLine h4 {
+  margin: 0px 5px;
+  color: white;
+  font-size: 14px;
+  font-style: italic;
+}
